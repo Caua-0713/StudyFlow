@@ -1,31 +1,43 @@
-package Classes;
+package Esqueletos;
+import java.util.ArrayList;
 
-import Esqueletos.GerenciadorDeTarefasEsqueleto;
-
-public abstract class Tarefas implements GerenciadorDeTarefasEsqueleto{
+//classe abstrata para os métodos da classe tarefas que vai ser implementada a frente
+public abstract class TarefasAbstract implements GerenciadorDeTarefasEsqueleto{
     
     private String nomeTarefa;
     private boolean statusTarefa;
     private String descricao;
 
-    public void Tarefa(String titulo, boolean status, String descricao){
+    
+
+    public TarefasAbstract(String titulo, boolean status, String descricao){
 
         this.setNomeTarefa(titulo);
         this.setStatusTarefa(status = false);
         this.setDescricao(descricao);
 
+
     }
 
-    public abstract void editarTarefa();
+     public void adicionarTarefa(){
+
+
+     }
+
+
+
+
+    public void editarTarefa(){
+
+
+    }
+
 
     
+    public void excluirTarefa(){
 
 
-
-
-
-
-
+    }
 
 
 
