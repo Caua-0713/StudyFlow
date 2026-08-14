@@ -55,7 +55,7 @@ public class ControleTarefas extends TarefasAbstract {
     }
 
     
-    public void excluirTarefa(ControleTarefas t1) {  //Acabar após concluir a classe menus
+    public void excluirTarefa(ControleTarefas t1) { 
 
         System.out.println("Editar tarefa: ");
 
