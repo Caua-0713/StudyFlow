@@ -1,12 +1,14 @@
 package Esqueletos;
 import java.util.ArrayList;
 
+
 //classe abstrata para os métodos da classe tarefas que vai ser implementada a frente
 public abstract class TarefasAbstract implements GerenciadorDeTarefasEsqueleto{
     
     private String nomeTarefa;
     private boolean statusTarefa;
     private String descricao;
+    
 
     
 

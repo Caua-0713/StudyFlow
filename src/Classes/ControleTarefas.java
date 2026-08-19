@@ -3,8 +3,11 @@ package Classes;
 import java.util.ArrayList;
 
 import Esqueletos.TarefasAbstract;
+import java.util.Scanner;
 
 public class ControleTarefas extends TarefasAbstract {
+
+    Scanner sc = new Scanner(System.in);
 
     ArrayList<ControleTarefas> tarefasAtuais = new ArrayList<ControleTarefas>();
     
@@ -58,8 +61,11 @@ public class ControleTarefas extends TarefasAbstract {
     public void excluirTarefa(ControleTarefas t1) { 
 
         System.out.println("Editar tarefa: ");
+        System.out.println("Qual campo deseja editar: ");
+        System.out.println("1 - Título da tarefa: ");
+        System.out.println("2 - Descrição");
+        int escolha = sc.nextInt();
 
 
-    }
-
+}
 }
