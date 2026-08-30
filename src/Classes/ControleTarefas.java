@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class ControleTarefas extends TarefasAbstract {
 
     ArrayList<Tarefas> tarefasSalvas = new ArrayList<>();
+    Scanner sc = new Scanner(System.in);
 
     @Override
     public void adicionarTarefa(Tarefas t) {
@@ -35,25 +36,47 @@ public class ControleTarefas extends TarefasAbstract {
     }
 
     @Override
-    public void historicoDetarefas(Tarefas t) { //Lista as tarefas completas
+    public void historicoDetarefas(Tarefas t) { // Lista as tarefas completas
 
-    System.out.println("-Tarefas completas-");
-    
-    for (Tarefas tarefas : tarefasSalvas) {
+        System.out.println("-Tarefas completas-");
 
-        if (t.isStatusTarefa() == false){
+        for (Tarefas tarefas : tarefasSalvas) {
 
-            System.out.println(tarefas);
-        } else {
-            continue;
-        }  
-      
-        
+            if (t.isStatusTarefa() == false) {
+
+                System.out.println(tarefas);
+            } else {
+                continue;
+            }
+
+        }
     }
-}
 
     public void editarTarefa(Tarefas t) {
+        String escolha;
+        System.out.println("Atualizar título? S ou N");
+        escolha = sc.nextLine();
+        if (escolha.equalsIgnoreCase("S")) {
+
+            System.out.println("Digite o título.");
+            t.setNomeTarefa(sc.nextLine());
+
+        }
+
+    System.out.println("Deseja atualiazar a descrição? S ou N");
+          escolha = sc.nextLine();
+        if (escolha.equalsIgnoreCase("S")) {
+
+            System.out.println("Digite a descrição: ");
+    
+            t.setDescricao(sc.nextLine());
+        System.out.println("Descrição atualizada!");
+
+        }
+
+
+
 
     }
-    
+
 }
