@@ -1,24 +1,18 @@
 package Classes;
 
-public class Tarefas extends ControleTarefas{
-    
+public class Tarefas {
+
     private String nomeTarefa;
-    private boolean statusTarefa;
+    private Boolean statusTarefa;
     private String descricao;
 
-
-
-
-    public Tarefas(String titulo, boolean status, String descricao) {
-        
+    public Tarefas(String titulo, String descricao) {
         this.setNomeTarefa(titulo);
-        statusTarefa = false;
+        this.statusTarefa = false;
         this.setDescricao(descricao);
     }
 
-
-
-    //getts e setts
+    // getters e setters
 
     public void setNomeTarefa(String nomeTarefa) {
         this.nomeTarefa = nomeTarefa;
@@ -28,11 +22,11 @@ public class Tarefas extends ControleTarefas{
         return nomeTarefa;
     }
 
-    public void setStatusTarefa(boolean statusTarefa) {
+    public void setStatusTarefa(Boolean statusTarefa) {
         this.statusTarefa = statusTarefa;
     }
 
-    public boolean isStatusTarefa() {
+    public Boolean getStatusTarefa() {
         return statusTarefa;
     }
 
@@ -43,6 +37,4 @@ public class Tarefas extends ControleTarefas{
     public String getDescricao() {
         return descricao;
     }
-
-
 }
