@@ -1,14 +1,13 @@
 import Classes.Tarefas;
 import Classes.ControleTarefas;
+import Classes.Usuario;
+
 public class App {
     public static void main(String[] args) throws Exception {
         
-    ControleTarefas controle = new ControleTarefas();
-Tarefas t1 = new Tarefas("Estudar", "Rever conteúdo em Java");
-controle.adicionarTarefa(t1);
+    Usuario u1 = new Usuario("Cauã");
 
-
-controle.listarTarefas();
+    u1.imprimir();
 
 
     }
