@@ -1,13 +1,15 @@
 import Classes.Tarefas;
 import Classes.ControleTarefas;
 import Classes.Usuario;
+import Classes.MenuUsuario;
 
 public class App {
     public static void main(String[] args) throws Exception {
         
-    Usuario u1 = new Usuario("Cauã");
+        MenuUsuario menu = new MenuUsuario();
 
-    u1.imprimir();
+        menu.menuCadastro();
+        
 
 
     }

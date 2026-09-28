@@ -1,6 +1,6 @@
 package Esqueletos;
 
-public interface MenuUsuarioEsqueleto {
+public interface MenuInteracaoEsqueleto {
     
     public void imprimir(); //mostrar dados do usuário
     public void editarNome();

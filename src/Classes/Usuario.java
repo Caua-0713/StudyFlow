@@ -3,13 +3,12 @@ package Classes;
 import java.util.UUID;
 import java.util.Scanner;
 
-import Esqueletos.MenuUsuarioEsqueleto;
+import Esqueletos.MenuInteracaoEsqueleto;
 
-public class Usuario implements MenuUsuarioEsqueleto {
+public class Usuario implements MenuInteracaoEsqueleto {
 
     private String nome;
     private UUID id;
-    private int cont = 0;
     Scanner sc = new Scanner(System.in);
 
     public Usuario(String nome) {
