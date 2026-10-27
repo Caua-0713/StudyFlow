@@ -5,12 +5,9 @@ import Classes.MenuUsuario;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        
+
         MenuUsuario menu = new MenuUsuario();
-
-        menu.menuCadastro();
-        
-
-
+        Usuario user = menu.menuCadastro();
+        menu.menuPrincipal(user);
     }
 }

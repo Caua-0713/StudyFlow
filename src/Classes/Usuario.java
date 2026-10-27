@@ -1,7 +1,7 @@
 package Classes;
 
-import java.util.UUID;
 import java.util.Scanner;
+import java.util.UUID;
 
 import Esqueletos.MenuInteracaoEsqueleto;
 
@@ -9,44 +9,38 @@ public class Usuario implements MenuInteracaoEsqueleto {
 
     private String nome;
     private UUID id;
-    Scanner sc = new Scanner(System.in);
+    private ControleTarefas controle = new ControleTarefas();
+    private Scanner sc = new Scanner(System.in);
 
     public Usuario(String nome) {
-
         setNome(nome);
         this.id = UUID.randomUUID();
-
     }
 
     @Override
     public void imprimir() {
-
         System.out.println("Usuário ");
         System.out.println("Nome: " + getNome());
         System.out.println("ID: " + getId());
-
     }
 
     @Override
     public void editarNome() {
-
         boolean sucesso;
 
         do {
             System.out.println("Digite o seu nome: ");
-            setNome(sc.next(nome));
-            if (nome == "") {
+            String novoNome = sc.nextLine();
+
+            if (novoNome == null || novoNome.isBlank()) {
                 System.out.println("Nome inválido ou vazio!");
                 sucesso = false;
-
             } else {
-
+                setNome(novoNome);
                 sucesso = true;
-
             }
 
-        } while (sucesso != true);
-
+        } while (!sucesso);
     }
 
     // Getters e setters
@@ -63,4 +57,7 @@ public class Usuario implements MenuInteracaoEsqueleto {
         return id;
     }
 
+    public ControleTarefas getControle() {
+        return controle;
+    }
 }
